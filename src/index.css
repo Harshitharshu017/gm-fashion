@@ -1,3 +1,19 @@
+/* Force the entire website to use a dark theme with white text */
+:root, html, body, #root {
+  background-color: #0d0d0d !important;
+  color: #ffffff !important;
+  color-scheme: dark !important;
+}
+
+/* Fix the faint gray paragraph text you saw on the main page */
+p {
+  color: #e5e7eb !important; /* This forces a crisp, clear light gray for text */
+}
+
+/* Fix the category style boxes to make them visible */
+div[class*="bg-white"], div[class*="bg-slate-50"] {
+  background-color: #1a1a1a !important;
+}
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
