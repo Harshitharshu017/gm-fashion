@@ -1,52 +1,18 @@
 /* ==========================================
-   GM FASHION MASTER SYSTEM STYLESHEET 
+   ONLY TARGETING TEXT COLOR - KEEPING ORIGINAL STYLES
    ========================================== */
 
-/* 1. FORCE GLOBAL DARK BACKGROUND AND LIGHT TEXT */
-html, 
-body, 
-#root, 
-#root > div {
-  background-color: #0c0a09 !important;
+/* Forces all default text elements to be clear and bright */
+p, span, h1, h2, h3, h4, h5, h6, label, li, a {
   color: #ffffff !important;
 }
 
-/* 2. FORCE MAIN TEXT VISIBILITY */
-h1, h2, h3, h4, h5, h6, p, span, a, label {
+/* Fixes any faint gray paragraph text under headers */
+.text-muted, [class*="text-gray-"], [class*="text-slate-"], [class*="text-stone-"] {
+  color: #f3f4f6 !important; /* Premium crisp light-gray */
+}
+
+/* Ensures heading text pops out vividly */
+[class*="text-black"], [class*="text-neutral-900"] {
   color: #ffffff !important;
-}
-
-/* 3. FIX ALL LAYOUT CARDS AND BOXES FOR THE PRODUCTS TO VISIBLY SHOW UP */
-div, section, article, ul, li {
-  /* Restores background visibility without breaking image containers */
-  border-color: #292524 !important;
-}
-
-/* 4. PINPOINT TAILWIND LIGHT-THEME OVERRIDES */
-[class*="bg-white"], 
-[class*="bg-gray-"], 
-[class*="bg-slate-"],
-[class*="bg-stone-"] {
-  background-color: #1c1917 !important;
-}
-
-[class*="text-black"], 
-[class*="text-gray-"], 
-[class*="text-slate-"],
-[class*="text-stone-"] {
-  color: #ffffff !important;
-}
-
-/* 5. PROTECT PRODUCT IMAGES AND UI ICONS FROM GETTING BLANKED OUT */
-img, svg, path, canvas {
-  background-color: transparent !important;
-}
-
-/* 6. STYLE MAIN ACTIONS AND NAVIGATION BUTTONS */
-button, 
-input[type="submit"],
-.btn {
-  background-color: #f97316 !important; /* Premium brand signature orange */
-  color: #ffffff !important;
-  border: none !important;
 }
