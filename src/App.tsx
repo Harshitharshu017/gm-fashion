@@ -169,7 +169,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#050505] text-[#F5F5F5]">
+    <div className="min-h-screen flex flex-col bg-[#0c0a09] text-white">
       {/* Sticky Premium Navbar Header */}
       <Navbar
         currentView={currentView}
