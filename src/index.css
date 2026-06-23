@@ -1,19 +1,4 @@
-/* Force the entire website to use a dark theme with white text */
-:root, html, body, #root {
-  background-color: #0d0d0d !important;
-  color: #ffffff !important;
-  color-scheme: dark !important;
-}
 
-/* Fix the faint gray paragraph text you saw on the main page */
-p {
-  color: #e5e7eb !important; /* This forces a crisp, clear light gray for text */
-}
-
-/* Fix the category style boxes to make them visible */
-div[class*="bg-white"], div[class*="bg-slate-50"] {
-  background-color: #1a1a1a !important;
-}
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -55,4 +40,21 @@ div[class*="bg-white"], div[class*="bg-slate-50"] {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #570013;
+}
+/* This forces EVERY single element on the page to have a dark background and white text */
+*, *::before, *::after {
+  background-color: #0c0a09 !important;
+  color: #ffffff !important;
+  border-color: #292524 !important;
+}
+
+/* Keep images and icons perfectly normal so they don't turn dark */
+img, svg, path, button, a, [class*="Hero"] img {
+  background-color: transparent !important;
+}
+
+/* Ensure the hero button stands out */
+button, a {
+  background-color: #f97316 !important; /* Forces your signature orange accent color */
+  color: #ffffff !important;
 }
