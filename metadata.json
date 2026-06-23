@@ -1,0 +1,6 @@
+{
+  "name": "GM Fashion",
+  "description": "Premium e-commerce storefront & inventory management dashboard with secure full-stack dataset tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

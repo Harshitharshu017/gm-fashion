@@ -1,0 +1,42 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom palette matching high-contrast bold typography theme: streetwear orange, dark panel backdrops, electric borders */
+  --color-luxury-red: #F27D26;
+  --color-luxury-lightpink: #111111;
+  --color-luxury-gold: #F27D26;
+  --color-luxury-sand: #71717a;
+  --color-luxury-dark: #F5F5F5;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-[#F5F5F5] antialiased selection:bg-[#F27D26] selection:text-black font-sans;
+  }
+}
+
+/* Custom scrollbar utility */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c8c6c5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #570013;
+}
