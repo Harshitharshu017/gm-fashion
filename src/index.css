@@ -1,42 +1,52 @@
+/* ==========================================
+   GM FASHION MASTER SYSTEM STYLESHEET 
+   ========================================== */
 
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
-@import "tailwindcss";
-
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Outfit", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-
-  /* Custom palette matching high-contrast bold typography theme: streetwear orange, dark panel backdrops, electric borders */
-  --color-luxury-red: #F27D26;
-  --color-luxury-lightpink: #111111;
-  --color-luxury-gold: #F27D26;
-  --color-luxury-sand: #71717a;
-  --color-luxury-dark: #F5F5F5;
-}
-
-@layer base {
-  body {
-    @apply bg-[#050505] text-[#F5F5F5] antialiased selection:bg-[#F27D26] selection:text-black font-sans;
-  }
-}
-
-/* Force clear visibility for headers and body text globally */
-h1, h2, h3, h4, h5, h6, p, span {
+/* 1. FORCE GLOBAL DARK BACKGROUND AND LIGHT TEXT */
+html, 
+body, 
+#root, 
+#root > div {
+  background-color: #0c0a09 !important;
   color: #ffffff !important;
 }
 
-/* Ensure descriptions inside white or gray components remain readable */
-div, section, card {
+/* 2. FORCE MAIN TEXT VISIBILITY */
+h1, h2, h3, h4, h5, h6, p, span, a, label {
   color: #ffffff !important;
 }
 
-/* Fix for any text explicitly forced to dark styles by Tailwind */
-.[class*="text-black"], .[class*="text-gray-900"], .[class*="text-stone-900"] {
+/* 3. FIX ALL LAYOUT CARDS AND BOXES FOR THE PRODUCTS TO VISIBLY SHOW UP */
+div, section, article, ul, li {
+  /* Restores background visibility without breaking image containers */
+  border-color: #292524 !important;
+}
+
+/* 4. PINPOINT TAILWIND LIGHT-THEME OVERRIDES */
+[class*="bg-white"], 
+[class*="bg-gray-"], 
+[class*="bg-slate-"],
+[class*="bg-stone-"] {
+  background-color: #1c1917 !important;
+}
+
+[class*="text-black"], 
+[class*="text-gray-"], 
+[class*="text-slate-"],
+[class*="text-stone-"] {
   color: #ffffff !important;
+}
+
+/* 5. PROTECT PRODUCT IMAGES AND UI ICONS FROM GETTING BLANKED OUT */
+img, svg, path, canvas {
+  background-color: transparent !important;
+}
+
+/* 6. STYLE MAIN ACTIONS AND NAVIGATION BUTTONS */
+button, 
+input[type="submit"],
+.btn {
+  background-color: #f97316 !important; /* Premium brand signature orange */
+  color: #ffffff !important;
+  border: none !important;
 }
