@@ -1,18 +1,3 @@
-/* ==========================================
-   ONLY TARGETING TEXT COLOR - KEEPING ORIGINAL STYLES
-   ========================================== */
-
-/* Forces all default text elements to be clear and bright */
-p, span, h1, h2, h3, h4, h5, h6, label, li, a {
-  color: #ffffff !important;
-}
-
-/* Fixes any faint gray paragraph text under headers */
-.text-muted, [class*="text-gray-"], [class*="text-slate-"], [class*="text-stone-"] {
-  color: #f3f4f6 !important; /* Premium crisp light-gray */
-}
-
-/* Ensures heading text pops out vividly */
-[class*="text-black"], [class*="text-neutral-900"] {
-  color: #ffffff !important;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
