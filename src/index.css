@@ -26,36 +26,17 @@
   }
 }
 
-/* Secure dark mode without breaking images */
-html, body, #root, body > div {
-  background-color: #0c0a09 !important;
+/* Force clear visibility for headers and body text globally */
+h1, h2, h3, h4, h5, h6, p, span {
   color: #ffffff !important;
 }
 
-/* Force dark layout sections specifically, while letting images shine through */
-div[class*="bg-white"], 
-div[class*="bg-gray-"], 
-div[class*="bg-slate-"], 
-section {
-  background-color: #0c0a09 !important;
+/* Ensure descriptions inside white or gray components remain readable */
+div, section, card {
   color: #ffffff !important;
 }
 
-/* Ensure all text paragraphs are easily readable */
-p, span, h1, h2, h3, h4 {
-  color: #ffffff !important;
-}
-
-/* Ensure the hero button stands out clearly */
-button, a {
-  color: #ffffff !important;
-}
-/* Force text inside the collections/style cards to be bright white */
-div[class*="rounded-"], section div, .card, [class*="bg-"] p, [class*="bg-"] h3 {
-  color: #ffffff !important;
-}
-
-/* Ensure the sub-text inside those collection cards is also bright and readable */
-div p, div span, div h3 {
+/* Fix for any text explicitly forced to dark styles by Tailwind */
+.[class*="text-black"], .[class*="text-gray-900"], .[class*="text-stone-900"] {
   color: #ffffff !important;
 }
