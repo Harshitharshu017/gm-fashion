@@ -50,3 +50,12 @@ p, span, h1, h2, h3, h4 {
 button, a {
   color: #ffffff !important;
 }
+/* Force text inside the collections/style cards to be bright white */
+div[class*="rounded-"], section div, .card, [class*="bg-"] p, [class*="bg-"] h3 {
+  color: #ffffff !important;
+}
+
+/* Ensure the sub-text inside those collection cards is also bright and readable */
+div p, div span, div h3 {
+  color: #ffffff !important;
+}
